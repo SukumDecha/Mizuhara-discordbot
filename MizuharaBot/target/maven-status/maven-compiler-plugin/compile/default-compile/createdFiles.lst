@@ -1,0 +1,15 @@
+me\louderdev\discordAPI\api\DiscordAPI.class
+me\louderdev\discordAPI\command\subcommand\BanAppealCommand.class
+me\louderdev\discordAPI\command\subcommand\ChatCommand.class
+me\louderdev\discordAPI\command\subcommand\YoutubeCommand.class
+me\louderdev\discordAPI\command\subcommand\InfoCommand.class
+me\louderdev\discordAPI\command\subcommand\TrueWalletCommand.class
+me\louderdev\discordAPI\listener\DiscordListener.class
+me\louderdev\discordAPI\command\Command.class
+me\louderdev\discordAPI\command\subcommand\MoveRankCommand.class
+me\louderdev\discordAPI\webhook\MizuharaBot.class
+me\louderdev\discordAPI\command\subcommand\HistoryCommand.class
+me\louderdev\discordAPI\api\DiscordAPI$1.class
+me\louderdev\discordAPI\utils\DateUtil.class
+me\louderdev\discordAPI\DiscordBot.class
+me\louderdev\discordAPI\command\subcommand\ClearChatCommand.class
