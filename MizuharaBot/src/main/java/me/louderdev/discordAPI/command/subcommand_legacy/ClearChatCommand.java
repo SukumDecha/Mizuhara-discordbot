@@ -1,31 +1,29 @@
-package me.louderdev.discordAPI.command.subcommand;
+package me.louderdev.discordAPI.command.subcommand_legacy;
 
-import me.louderdev.discordAPI.command.Command;
+import me.louderdev.discordAPI.command.Command_legacy;
 import me.louderdev.netflix.util.Tasks;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.MessageBuilder;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class ChatCommand extends Command {
+public class ClearChatCommand extends Command_legacy {
     @Override
     public String getName() {
-        return "chat";
+        return "clearchat";
     }
 
     @Override
     public String getDescription() {
-        return "Force player typing";
+        return "Clear chat in the channel";
     }
 
     @Override
     public List<String> getAliases() {
         return (Arrays.asList(
-                "chats",
-                "forcechat"
+                "clear",
+                "chatclear"
         ));
     }
 
@@ -35,22 +33,21 @@ public class ChatCommand extends Command {
             if (args.length < 2) {
                 EmbedBuilder eb = new EmbedBuilder();
                 eb.setTitle("Mizuhara - Command");
-                eb.setDescription("Please use /chat <message> to send the message");
+                eb.setDescription("Please use /clearchat <amount> to send the message");
                 eb.setFooter("Created by Sukum_Decha", event.getJDA().getUserById("335690413425819652").getAvatarUrl());
 
                 event.getChannel().sendTyping().queue();
                 event.getChannel().sendMessage(eb.build()).queue();
                 return;
             }
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int x = 1; x < args.length; x++) {
-                stringBuilder.append(args[x]);
-                stringBuilder.append(" ");
-            }
-            Message toSend = new MessageBuilder().append(stringBuilder.toString()).build();
-            event.getChannel().sendTyping().queue();
-            event.getChannel().sendMessage(toSend).queue();
+            int amount = Integer.parseInt(args[1]);
+            event.getTextChannel().getHistoryBefore(event.getMessage(), amount).queue(messageHistory -> {
+                messageHistory.getRetrievedHistory().forEach(message -> {
+                    message.delete().queue();
+                });
+            });
+            event.getMessage().delete().queue();
+            event.getTextChannel().sendMessage("Successfully cleared " + amount + " messages.").queue();
         });
-
     }
 }

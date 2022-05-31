@@ -25,7 +25,7 @@ public class DiscordAPI {
         eb.addField("/list , /onlines", " - View the playercount on the server", false);
         eb.setFooter("Requested by " + member.getUser().getName(), member.getUser().getAvatarUrl());
 
-        textChannel.sendMessage(eb.build()).queue();
+        textChannel.sendMessageEmbeds(eb.build()).queue();
 
     }
     public static void sendFFAWinUHC(String winner, List<String> kill) {

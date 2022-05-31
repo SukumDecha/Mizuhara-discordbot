@@ -1,6 +1,6 @@
-package me.louderdev.discordAPI.command.subcommand;
+package me.louderdev.discordAPI.command.subcommand_legacy;
 
-import me.louderdev.discordAPI.command.Command;
+import me.louderdev.discordAPI.command.Command_legacy;
 import me.louderdev.netflix.player.PlayerData;
 import me.louderdev.netflix.player.punishment.Punishment;
 import me.louderdev.netflix.player.punishment.PunishmentType;
@@ -8,8 +8,6 @@ import me.louderdev.netflix.util.CC;
 import me.louderdev.netflix.util.Tasks;
 import me.louderdev.netflix.util.TimeUtil;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.entities.Emote;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -17,7 +15,7 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class HistoryCommand extends Command {
+public class HistoryCommand extends Command_legacy {
 
 
     @Override
