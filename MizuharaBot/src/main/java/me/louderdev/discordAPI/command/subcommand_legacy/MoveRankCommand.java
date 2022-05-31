@@ -1,6 +1,6 @@
-package me.louderdev.discordAPI.command.subcommand;
+package me.louderdev.discordAPI.command.subcommand_legacy;
 
-import me.louderdev.discordAPI.command.Command;
+import me.louderdev.discordAPI.command.Command_legacy;
 import me.louderdev.netflix.backend.RedisUtil;
 import me.louderdev.netflix.player.PlayerData;
 import me.louderdev.netflix.player.punishment.Punishment;
@@ -15,15 +15,13 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
-import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import org.bukkit.Bukkit;
 
 import java.awt.*;
-import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
-public class MoveRankCommand extends Command {
+public class MoveRankCommand extends Command_legacy {
 
     private Rank rank;
     private String oldName;

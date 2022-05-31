@@ -1,15 +1,13 @@
 package me.louderdev.discordAPI.command;
 
-import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.util.List;
 
-public abstract class Command extends ListenerAdapter {
+public abstract class Command_legacy extends ListenerAdapter {
 
     public abstract String getName();
     public abstract String getDescription();
