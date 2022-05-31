@@ -23,9 +23,8 @@ import java.net.UnknownHostException;
 @Getter
 @Setter
 public class DiscordBot extends JavaPlugin {
-
-
-    @Getter private static DiscordBot instance;
+    @Getter
+    private static DiscordBot instance;
 
     private String serverName;
     private ConfigFile configFile;
@@ -44,9 +43,4 @@ public class DiscordBot extends JavaPlugin {
     private void registerBots() {
         new MizuharaBot();
     }
-
-    private void registerListener() {
-        //new DiscordListener();
-    }
-    
 }

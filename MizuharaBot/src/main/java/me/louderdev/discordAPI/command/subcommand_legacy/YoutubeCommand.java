@@ -1,16 +1,14 @@
-package me.louderdev.discordAPI.command.subcommand;
+package me.louderdev.discordAPI.command.subcommand_legacy;
 
-import me.louderdev.discordAPI.command.Command;
+import me.louderdev.discordAPI.command.Command_legacy;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.MessageBuilder;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class YoutubeCommand extends Command {
+public class YoutubeCommand extends Command_legacy {
     @Override
     public String getName() {
         return "youtubeappeal";
